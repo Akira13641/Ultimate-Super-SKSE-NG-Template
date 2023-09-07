@@ -1,25 +1,17 @@
 # SKSE Plugin Template
 
-SKSE Plugin base template for building projects with po3's [CommonLibSSE](https://github.com/dann1/CommonLibSSE/tree/dev) and [ClibUtil](https://github.com/powerof3/CLibUtil).
+SKSE Plugin base template for building projects with alandtse's updated NG fork of [CommonLibSSE](https://github.com/alandtse/CommonLibVR/tree/ng) and [ClibUtil](https://github.com/powerof3/CLibUtil).
 
 Loads configuration from `SKSE/Plugins/SKSE_Template.ini`. Prints the value of the `Mark` key if `bConsole` is set to `true` and to `SKSE_Template.log` if `bFile` is set to true.
 
 The plugin specific functionality has been carefully separated from generic boilerplate SKSE Plugin code located at `src/template/`. The result is a clean and easy to understand project layout with the logic at `src`, showcasing usage of functionality that you will most likely use in your plugins. Comments have been added explaining what the code does.
-
-## Building
-
-Unlike projects using [CommonLibSSE-NG](https://github.com/CharmedBaryon/CommonLibSSE-NG), a DLL needs be built for each supported game version. So you'll end up with several DLLs. This is a consequence of using [CommonLibSSE](https://github.com/powerof3/CommonLibSSE). This is quite easy to accomplish though.
-
-This template uses [my own fork of CommonLibSSE](https://github.com/dann1/CommonLibSSE) as a git submodule since sometimes I create [functionality that fits into CommonLibSSE](https://github.com/powerof3/CommonLibSSE/pull/84). Since that can take a while to be accepted, I opt to use my fork instead of po3's.
-
-I don't intend to create yet another fork, is just the way changes are pushed. I'll keep it synced. You can replace the submodule with po3's if you want. The build process will not differ.
 
 ### Requirements
 
 - [CMake](https://cmake.org/)
 - [Vcpkg](https://github.com/microsoft/vcpkg)
 - [Visual Studio Community Preview 2022](https://visualstudio.microsoft.com/): Install desktop development with C++ extension
-- [CommonLibSSE](https://github.com/dann1/CommonLibSSE/tree/dev): This is already included as git submodle
+- [CommonLibSSE](https://github.com/alandtse/CommonLibVR/tree/ng): This is already included as git submodle
 - **Environmental Variables**:
   - Add the cmake executable to your `PATH` environmental variable
   - Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
